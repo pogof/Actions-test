@@ -2,7 +2,7 @@ name: Build and Push Docker image
 
 on:
   push:
-    branches: [ "main" ]  # Change to your default branch if needed
+    branches: [ "dev" ]  # Change to your default branch if needed
 
 jobs:
   build-and-push:
@@ -27,4 +27,4 @@ jobs:
           context: ./BigApp
           file: ./BigApp/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/actions-test:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/actions-test:dev
